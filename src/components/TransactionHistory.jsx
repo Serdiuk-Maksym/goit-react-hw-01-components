@@ -3,7 +3,7 @@ import transactions from 'components/transactions.json';
 const TransactionHistory = () => {
   return (
     <table class="transaction-history">
-      <thead>
+      <thead className="table-header">
         <tr>
           <th>Type</th>
           <th>Amount</th>
@@ -11,7 +11,7 @@ const TransactionHistory = () => {
         </tr>
       </thead>
 
-      <tbody>
+      <tbody className="table-body">
         {transactions.map(transaction => (
           <tr key={transaction.id}>
             <td>{transaction.type}</td>

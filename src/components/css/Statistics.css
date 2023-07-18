@@ -8,7 +8,7 @@
 .stat-list {
   display: flex;
 }
-.item {
+.stat-list .item {
   display: flex;
   flex-direction: column;
   align-items: center;
