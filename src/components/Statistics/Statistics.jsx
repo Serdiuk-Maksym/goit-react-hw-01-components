@@ -1,5 +1,4 @@
 import React from 'react';
-import data from '../../data/data.json';
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
@@ -12,17 +11,20 @@ function getRandomColor() {
   return color;
 }
 
-const Statistics = () => {
+const Statistics = ({ stats, title }) => {
   return (
     <section className={`${css.statistics} ${css.container}`}>
-      <h2 className={css.title}>Upload stats</h2>
+      {title && <h2 className={css.title}>{title}</h2>}
 
       <ul className={css.statList}>
-        {data.map(({ id, label, percentage }) => (
+        {stats.map(({ id, label, percentage }) => (
           <li
             className={css.item}
             key={id}
-            style={{ backgroundColor: getRandomColor() }}
+            style={{
+              backgroundColor: getRandomColor(),
+              width: `calc(100%/${stats.length})`,
+            }}
           >
             <span className={css.label}>{label}</span>
             <span className={css.percentage}>{percentage}%</span>
@@ -34,9 +36,14 @@ const Statistics = () => {
 };
 
 Statistics.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };
 
 export default Statistics;
