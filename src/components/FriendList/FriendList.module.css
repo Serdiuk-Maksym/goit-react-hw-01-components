@@ -1,4 +1,4 @@
-.friend-list {
+.friendList {
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
 .status.false {
   background-color: red;
 }
-.friend-list .item {
+.friendList .item {
   display: flex;
   flex-direction: row;
   align-items: center;

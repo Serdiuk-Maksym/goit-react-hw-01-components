@@ -2,13 +2,18 @@
   width: 300px;
   border-radius: 2%;
 }
+.container {
+  padding: 0;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
 .statistics .title {
   display: none;
 }
-.stat-list {
+.statList {
   display: flex;
 }
-.stat-list .item {
+.statList .item {
   display: flex;
   flex-direction: column;
   align-items: center;

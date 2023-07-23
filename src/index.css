@@ -1,8 +1,5 @@
 @import-normalize; /* bring in normalize.css styles */
-@import url('./components/css/Profile.css');
-@import url('./components/css/Statistics.css');
-@import url('./components/css/FriendList.css');
-@import url('./components/css/TransactionHistory.css');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,10 +21,4 @@ p {
 ul {
   list-style: none;
   padding: 0;
-}
-
-.container {
-  padding: 0;
-  margin: 0 auto;
-  background-color: #ffffff;
 }
